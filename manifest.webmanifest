@@ -1,0 +1,17 @@
+{
+  "name": "Polyglot Typing Studio",
+  "short_name": "Polyglot Typing",
+  "description": "ฝึกพิมพ์ 5 ภาษา: อังกฤษ ไทย จีน เกาหลี ญี่ปุ่น",
+  "lang": "th",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdeede",
+  "theme_color": "#a99be8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
