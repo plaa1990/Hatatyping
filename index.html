@@ -1337,7 +1337,10 @@ function installApp() { if (deferredInstall) { deferredInstall.prompt(); deferre
 (function pwaInit() {
     const note = document.getElementById('pwa-note');
     const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
-    if (/iphone|ipad|ipod/i.test(navigator.userAgent) && !standalone) note.textContent = 'iPhone/iPad: แตะปุ่มแชร์ แล้วเลือก "เพิ่มลงในหน้าจอโฮม" เพื่อติดตั้งเป็นแอป';
+    const ua = navigator.userAgent;
+    if (/Line\/|FBAN|FBAV|Instagram|MicroMessenger/i.test(ua)) note.textContent = '⚠️ คุณเปิดอยู่ในแอปอื่น (เช่น LINE/Facebook) ติดตั้งไม่ได้ — แตะ ⋮ แล้วเลือก "เปิดในเบราว์เซอร์" (Chrome / Safari) ก่อน';
+    else if (/android/i.test(ua) && !standalone) note.textContent = 'Android: ใช้ Chrome แล้วแตะเมนู ⋮ → "ติดตั้งแอป" หรือ "เพิ่มไปยังหน้าจอหลัก" (ถ้ามีปุ่มติดตั้งด้านบนก็กดได้เลย)';
+    else if (/iphone|ipad|ipod/i.test(navigator.userAgent) && !standalone) note.textContent = 'iPhone/iPad: แตะปุ่มแชร์ แล้วเลือก "เพิ่มลงในหน้าจอโฮม" เพื่อติดตั้งเป็นแอป';
     if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
         navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(() => { if (!note.textContent) note.textContent = '✅ ใช้งานออฟไลน์ได้แล้ว'; }).catch(() => {});
     } else if (!note.textContent) note.textContent = 'เปิดผ่านเว็บ (https) เพื่อติดตั้งเป็นแอปและใช้ออฟไลน์ได้';
