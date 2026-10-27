@@ -1,0 +1,6 @@
+{
+  "name": "CodeQuest Academy - Ultimate Offline Edition",
+  "description": "แพลตฟอร์มเกมเรียนรู้การเขียนโค้ดและพัฒนาทักษะ Full-Stack Developer แบบออฟไลน์ 100% พร้อมเครื่องมือจำลองอัลกอริทึม แซนด์บ็อกซ์โค้ด และห้องแล็บปฏิบัติการโดยไม่พึ่งพา AI หรือ API ภายนอก",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
